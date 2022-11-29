@@ -1,7 +1,7 @@
 <script setup>
-import Base from '../layouts/base.vue'
 
 import { useRouter } from 'vue-router';
+import Base from '../layouts/base.vue'
 
 const router = useRouter()
 
