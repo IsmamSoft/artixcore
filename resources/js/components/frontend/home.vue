@@ -1,7 +1,7 @@
 <script setup>
 
 import { useRouter } from 'vue-router';
-import Base from '../layouts/base.vue'
+import BaseVue from '../admin/layouts/base.vue';
 
 const router = useRouter()
 
@@ -12,7 +12,7 @@ const logout = () => {
 </script>
 
 <template>
-    <Base />
+     <BaseVue />
     <h1>welcome Home Frontend</h1>
     <div>
         <router-link to="/home">Home</router-link>

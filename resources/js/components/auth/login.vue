@@ -13,10 +13,10 @@ let form = reactive({
 
 let error = ref('')
 
-axios.defaults.headers.common = {
-    'X-Requested-With': 'XMLHttpRequest',
-    'X-CSRF-TOKEN': window.csrf_token
-};
+// axios.defaults.headers.common = {
+//     'X-Requested-With': 'XMLHttpRequest',
+//     'X-CSRF-TOKEN': window.csrf_token
+// };
 
 const login = async () => {
     await axios.post('/api/login', form)
@@ -35,7 +35,6 @@ const login = async () => {
 <template>
 <router-view/>
 <router-link to="/">Home</router-link>
-<router-link to="/">Welcome</router-link>
 <router-link to="/login">Login</router-link>
 
    <section class="background-radial-gradient overflow-hidden">
