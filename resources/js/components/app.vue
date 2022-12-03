@@ -1,6 +1,11 @@
+<script setup>
+import Header from './header.vue';
+import Welcome from './frontend/welcome.vue';
+</script>
 <template>
-<router-link to="/home">Home</router-link>
-<router-link to="/login">Login</router-link>
+<Header />
+
+<Welcome />
 
 </template>
 
