@@ -1,8 +1,6 @@
 <script setup>
-// import axios from 'axios';
 import { reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
-// import router from '../../router';
 
 const router = useRouter()
 
@@ -20,38 +18,36 @@ axios.defaults.headers.common = {
 
 const login = async () => {
     await axios.post('/api/login', form)
-    .then(response => {
-        if(response.data.success){
-            localStorage.setItem('token', response.data.data.token)
-            router.push('/dashboard')
-        } else {
-            error.value = response.data.message;
-        }
-    })
+        .then(response => {
+            if (response.data.success) {
+                localStorage.setItem('token', response.data.data.token)
+                router.push('/admin/home')
+            } else {
+                error.value = response.data.message;
+            }
+        })
 }
 
 </script>
 
 <template>
 
-          <p v-if="error">{{ error }}}</p>
+    <h2>Login</h2>
+    <p style="color:black;" v-if="error">{{ error }}</p>
+    <form @submit.prevent="login">
 
-                <form @submit.prevent="login">
+            <input type="email" v-model="form.email" />
+            <label>Email</label>
 
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <label class="form-label" for="form3Example3">Email address</label>
-                  <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" v-model="form.email">
-                </div>
 
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                   <label class="form-label" for="form3Example4">Password</label>
-                  <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" v-model="form.password">
-                </div>
+            <input type="password" v-model="form.password" />
+            <label>Password</label>
 
-                <!-- Submit button -->
-                <input type="submit" class="btn btn-outline-primary btn-block mb-4" value="Submit">
-                </form>
+
+            <input type="submit" value="Submit">
+
+        </form>
+        <router-link to="/">Back to Home</router-link>
+        <router-link to="/register">Register</router-link>
 
 </template>

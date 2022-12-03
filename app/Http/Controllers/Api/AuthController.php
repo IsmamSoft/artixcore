@@ -10,17 +10,17 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    function register(Request $request){
-
+    function register(Request $request)
+    {
         // Validator
-
-        $validator = Validator::make($request->all(),[
-             'name' => 'required',
-             'email'  => 'required|email',
-             'f_name' => 'required|same:password',
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'email'  => 'required|email',
+            'password' => 'required',
+            'confirm_password' => 'required|same:password',
         ]);
 
-        if($validator->fails()){
+        if ($validator->fails()) {
             $response = [
                 'success' => false,
                 'message' => $validator->errors()
@@ -43,8 +43,9 @@ class AuthController extends Controller
         return response()->json($response, 200);
     }
 
-    function login(Request $request){
-        if(Auth::attempt(['email'=>$request->email, 'password'=>$request->password])){
+    function login(Request $request)
+    {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             // $user = Auth::user();
             $user = $request->user();
             $success['token'] = $user->createToken('MyApp')->plainTextToken;

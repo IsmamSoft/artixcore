@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/{pathMatch}', function () {return view('welcome');})->where('pathMatch',".*");
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// Dashboard
-// Route::get('')
+Route::get('/{pathMatch}', function () {
+    return view('welcome');
+})->where('pathMatch', ".*");
