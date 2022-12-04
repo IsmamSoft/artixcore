@@ -1,7 +1,7 @@
 <script setup>
 import { reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
-
+import HeaderVue from '../pages/layouts/header.vue'
 const router = useRouter()
 
 let form = reactive({
@@ -31,23 +31,47 @@ const login = async () => {
 </script>
 
 <template>
+    <HeaderVue/>
 
-    <h2>Login</h2>
-    <p style="color:black;" v-if="error">{{ error }}</p>
-    <form @submit.prevent="login">
+<div class="container">
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+  <div class="card mb-3">
+    <div class="row g-0 d-flex align-items-center">
+      <div class="col-lg-6 d-none d-lg-flex">
+        <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" alt="Trendy Pants and Shoes"
+          class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+      </div>
+      <div class="col-lg-4">
+        <p style="color:black;" v-if="error">{{ error }}</p>
+        <div class="card-body py-5 px-md-5">
 
-            <input type="email" v-model="form.email" />
-            <label>Email</label>
+            <form @submit.prevent="login">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" id="form2Example1" class="form-control"  v-model="form.email"/>
+              <label class="form-label" for="form2Example1">Email address</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="form2Example2" class="form-control" v-model="form.password" />
+              <label class="form-label" for="form2Example2">Password</label>
+            </div>
 
 
-            <input type="password" v-model="form.password" />
-            <label>Password</label>
 
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
 
-            <input type="submit" value="Submit">
-
-        </form>
-        <router-link to="/">Back to Home</router-link>
-        <router-link to="/register">Register</router-link>
+          </form>
+          <router-link to="/register">Register</router-link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<!-- Section: Design Block -->
 
 </template>

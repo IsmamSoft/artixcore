@@ -1,5 +1,8 @@
+<script setup>
+import Header from '../layouts/header.vue'
+</script>
 <template>
-    <h1>Welcome to Nazsha</h1>
+   <Header />
     <router-link to="/login">Login</router-link>
     <router-link to="/register">Register</router-link>
 </template>
