@@ -11,6 +11,9 @@ import Header from '../layouts/header.vue'
                 <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=170667a&w=0&k=20&c=Sh2L3BedE75yIli2x1Y-A_Gz9MDluBIrH-Ff3BLRvyk=" alt="" srcset="">
             <div class="card-body">
             </div>
+            <div class="card-footer">
+            <router-link to="/single">Single</router-link>
+            </div>
         </div>
         </div>
         <div class="col-md-3">
@@ -18,6 +21,9 @@ import Header from '../layouts/header.vue'
                 <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=170667a&w=0&k=20&c=Sh2L3BedE75yIli2x1Y-A_Gz9MDluBIrH-Ff3BLRvyk=" alt="" srcset="">
             <div class="card-body">
                 dsfksdkjfsdklfsdklf
+            </div>
+            <div class="card-footer">
+                <router-link to="/single">Single</router-link>
             </div>
             </div>
             <!-- <br> -->
@@ -26,6 +32,9 @@ import Header from '../layouts/header.vue'
             <div class="card-body">
                 dsfksdkjfsdklfsdklf
             </div>
+            <div class="card-footer">
+                <router-link to="/single">Single</router-link>
+            </div>
             </div>
         </div>
         <div class="col-md-3">
@@ -33,6 +42,9 @@ import Header from '../layouts/header.vue'
                 <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=170667a&w=0&k=20&c=Sh2L3BedE75yIli2x1Y-A_Gz9MDluBIrH-Ff3BLRvyk=" alt="" srcset="">
             <div class="card-body">
                 dsfksdkjfsdklfsdklf
+            </div>
+            <div class="card-footer">
+                <router-link to="/single">Single</router-link>
             </div>
         </div>
         </div>

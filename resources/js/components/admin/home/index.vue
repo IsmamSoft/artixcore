@@ -3,7 +3,7 @@ import Header from '../layouts/header.vue'
 import Slide from '../layouts/sidebar.vue'
 import Footer from '../layouts/footer.vue'
 
-
+// import './file/js/app.js';
 </script>
 <template>
     <div class="wrapper">

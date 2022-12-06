@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeAdminIndex from '../components/admin/home/index.vue'
 // Pages
 import HomePage from '../components/pages/welcome/index.vue'
+// Single
+import SinglePage from '../components/pages/blog/index.vue'
 // Not Found
 import notFound from '../components/notFound.vue'
 // Login / Register
@@ -28,6 +30,18 @@ const routes = [
             requiresAuth:false
         }
     },
+
+    // Single
+    {
+        path: '/single',
+        name: 'Single',
+        component: SinglePage,
+        meta: {
+            requiresAuth:false
+        }
+    },
+
+
     // Login
     {
         path: '/login',
