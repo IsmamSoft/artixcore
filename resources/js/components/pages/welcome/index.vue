@@ -3,7 +3,7 @@ import Header from '../layouts/header.vue'
 </script>
 <template>
    <Header />
-   <div class="py-2"></div>
+   <div class="py-3"></div>
    <div class="container py-2">
     <div class="row">
         <div class="col-md-6">
